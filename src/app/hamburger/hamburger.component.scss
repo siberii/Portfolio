@@ -1,0 +1,37 @@
+@import "../../variables";
+
+.hambuger-container {
+  position: fixed;
+  top: 0;
+  background-color: color(accent);
+  height: 120px;
+  width: 120px;
+  transition: background-color ease 0.5s;
+
+  .hamburger-line {
+    position: absolute;
+    background-color: color(primary);
+    transition: background-color ease 0.5s;
+
+    height: 2px;
+    width: 26px;
+    left: 60%;
+  }
+
+  .line1 {
+    top: 80%;
+  }
+  .line2 {
+    top: 75%;
+  }
+  .line3 {
+    top: 70%;
+  }
+}
+
+.nav-scrolled {
+  background-color: color(primary);
+  .hamburger-line {
+    background-color: color(accent);
+  }
+}

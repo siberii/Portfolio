@@ -1,0 +1,15 @@
+$colors: (
+  "primary": #0f0f11,
+  "secondary": #f6f6f6,
+  "accent": #fff
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

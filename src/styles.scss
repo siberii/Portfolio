@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+@font-face {
+  font-family: cera;
+  font-weight: normal;
+  src: url("assets/fonts/Cera-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: cera;
+  font-weight: bold;
+  src: url("assets/fonts/Cera-Bold.ttf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cera;
+}
+
+body,
+html {
+  height: 100vh;
+  overflow-x: hidden;
+  // background-color: color(primary);
+}
