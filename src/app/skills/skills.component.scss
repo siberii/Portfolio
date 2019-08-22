@@ -1,0 +1,16 @@
+@import '../../variables';
+
+
+.hero {
+  @include flex-center();
+  flex-direction: column;
+  height: 100%;
+  color: color(primary);
+  background-color: color(secondary);
+
+  .main-title {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+}

@@ -16,9 +16,6 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.hamburgerElement = this.hamburgerElemRef.hamburgerElemRef.nativeElement;
     this.homeElement = this.homeElemRef.heroElemRef.nativeElement;
-
-    console.log(this.hamburgerElement);
-    console.log(this.homeElemRef.heroElemRef.nativeElement);
     this.invertHamburger();
   }
 

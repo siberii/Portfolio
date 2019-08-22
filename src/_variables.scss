@@ -13,3 +13,19 @@ $colors: (
   align-items: center;
   justify-content: center;
 }
+
+@mixin fade-up($delay) {
+  opacity: 0;
+  animation: fadeUp 1s ease $delay forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

@@ -6,12 +6,12 @@
   background-color: color(accent);
   height: 120px;
   width: 120px;
-  transition: background-color ease 0.5s;
-
+  transition: background-color ease 0.3s;
+  z-index: 10;
   .hamburger-line {
     position: absolute;
     background-color: color(primary);
-    transition: background-color ease 0.5s;
+    transition: background-color ease 0.3s;
 
     height: 2px;
     width: 26px;
