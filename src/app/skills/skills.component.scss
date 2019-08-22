@@ -1,16 +1,69 @@
-@import '../../variables';
-
+@import "../../variables";
 
 .hero {
   @include flex-center();
+  justify-content: space-evenly;
   flex-direction: column;
+  padding: 120px 0;
   height: 100%;
   color: color(primary);
   background-color: color(secondary);
 
   .main-title {
-    font-size: 40px;
+    font-size: 4.1vh;
     font-weight: bold;
+    margin: 5vh auto 0;
+
+    .underline {
+      background-color: color(primary);
+      height: 4px;
+      width: 70px;
+      margin: 5px auto;
+    }
   }
 
+  .levels {
+    @include flex-center();
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 6vh 10vw 3vh;
+
+    .level {
+      padding: 5px 20px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .level-selected {
+      background-color: color(primary);
+      color: color(secondary);
+    }
+  }
+
+  .skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-gap: 2vh;
+    padding: 3vh 10vw;
+    justify-items: center;
+    align-items: center;
+
+    .skill {
+      @include flex-center();
+      flex-direction: column;
+      height: auto;
+      .skill-logo {
+        height: 8vh;
+        width: 20vw;
+      }
+
+      .skill-name {
+        height: auto;
+        font-size: 1.5vh;
+        padding: 1vh;
+      }
+    }
+  }
 }

@@ -1,8 +1,62 @@
 <div class="hero">
-  <div class="main-title">SKILLS</div>
-  <div class="main-content">
-    I'm a second-year Software Engineer student at Polytechnique Montreal. I have serious passion for frontend, backend
-    development and software engineering in general. I have a great intellectual curiosity, analytical mind and I'm a
-    fast learner.
+  <div class="main-title">SKILLS<div class="underline"></div>
   </div>
+
+  <div class="levels">
+    <div [ngClass]="{'level-selected': isBasic}" class="level" (click)="toggleLevel($event)">Basic</div>
+    <div [ngClass]="{'level-selected': isIntermediate}" class="level" (click)="toggleLevel($event)">Intermediate</div>
+  </div>
+
+  <div *ngIf="isBasic" class="skills">
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/angular.svg" alt="angular-logo">
+      <div class="skill-name">Angular</div>
+    </div>
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/nodejs.svg" alt="nodejs-logo">
+      <div class="skill-name">Node.js</div>
+    </div>
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/expressjs.svg" alt="expressjs-logo">
+      <div class="skill-name">Express.js</div>
+    </div>
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/mongodb.svg" alt="mongodb-logo">
+      <div class="skill-name">MongoDB</div>
+    </div>
+  </div>
+
+  <div *ngIf="isIntermediate" class="skills">
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/html.svg" alt="angular-logo">
+      <div class="skill-name">HTML</div>
+    </div>
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/css.svg" alt="angular-logo">
+      <div class="skill-name">CSS3</div>
+    </div>
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/javascript.svg" alt="javascript-logo">
+      <div class="skill-name">JavaScript</div>
+    </div>
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/c++.svg" alt="cpp-logo">
+      <div class="skill-name">C++</div>
+    </div>
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/java.svg" alt="java-logo">
+      <div class="skill-name">Java</div>
+    </div>
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/csharp.svg" alt="csharp-logo">
+      <div class="skill-name">C#</div>
+    </div>
+    <div class="skill">
+      <img class="skill-logo" src="../../assets/images/skills/python.svg" alt="python-logo">
+      <div class="skill-name">Python</div>
+    </div>
+  </div>
+
+
+
 </div>
