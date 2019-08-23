@@ -2,10 +2,7 @@
 
 .hero {
   @include flex-center();
-  justify-content: space-evenly;
   flex-direction: column;
-  padding: 120px 0;
-  height: 100%;
   color: color(primary);
   background-color: color(secondary);
 

@@ -1,7 +1,8 @@
 $colors: (
   "primary": #0f0f11,
   "secondary": #f6f6f6,
-  "accent": #fff
+  "accent": #fff,
+  "tertiary": lighten(#0f0f11, 30%)
 );
 
 @function color($color-name) {

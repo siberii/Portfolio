@@ -1,16 +1,111 @@
-@import '../../variables';
-
+@import "../../variables";
 
 .hero {
   @include flex-center();
   flex-direction: column;
-  height: 100%;
+  padding: 15vh 0 15vh;
   color: color(secondary);
   background-color: color(primary);
 
   .main-title {
-    font-size: 40px;
+    font-size: 4.1vh;
     font-weight: bold;
+    margin: 5vh auto 0;
+
+    .underline {
+      background-color: color(secondary);
+      height: 4px;
+      width: 70px;
+      margin: 5px auto;
+    }
   }
 
+  .picture {
+    height: 100%;
+    margin: 4vh 0;
+  }
+
+  .main-content {
+    line-height: 4vh;
+    font-size: 2.2vh;
+    text-align: justify;
+    margin: 0 10vw;
+
+    .name {
+      color: #ccc;
+    }
+  }
+}
+
+.triangle-wrapper {
+  position: sticky;
+  height: auto;
+  width: auto;
+  &:hover {
+    .triangle-black {
+      animation: breathBlack 0.8s ease infinite alternate;
+    }
+    .triangle-white {
+      animation: breathWhite 0.8s ease infinite alternate 0.1s;
+    }
+  }
+}
+
+.triangle {
+  position: absolute;
+  height: 7.5vh;
+  z-index: 3;
+  cursor: pointer;
+  
+  @keyframes breathBlack {
+    0% {
+      transform: translate(-50%, -315%);
+    }
+    100% {
+      transform: translate(-50%, -330%);
+    }
+  }
+  @keyframes breathWhite {
+    0% {
+      transform: translate(-50%, -275%);
+    }
+    100% {
+      transform: translate(-50%, -290%);
+    }
+  }
+}
+
+.triangle-black {
+  transform: translate(-50%, -315%);
+}
+
+.triangle-white {
+  transform: translate(-50%, -275%);
+}
+
+.contacts {
+  @include flex-center();
+  left: 50%;
+  transform: translate(-50%, 0%);
+  position: fixed;
+  bottom: 0;
+
+  .contact {
+    @include flex-center();
+    background-color: color(accent);
+    height: 60px;
+    width: 60px;
+    margin-left: 1px;
+    transition: transform ease 0.3s;
+
+    &:hover {
+      transform: translateY(-20%);
+      cursor: pointer;
+    }
+
+    .contact-logo {
+      height: 25px;
+      display: block;
+    }
+  }
 }
