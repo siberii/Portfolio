@@ -8,7 +8,7 @@ import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 export class HomeComponent implements OnInit {
   constructor() { }
   @ViewChild('heroRef', { static: true }) heroElemRef: ElementRef;
-  @Input() target: HTMLElement;
+  @Input() target: any;
 
 
   isActive = false;

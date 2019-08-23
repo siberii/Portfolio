@@ -1,5 +1,16 @@
 <div #hamburgerRef [ngClass]="{'nav-scrolled': isScrolled}" class="hambuger-container">
+  <input [checked]="isChecked" (change)="onChange($event)" type="checkbox" class="toggler">
   <div class="hamburger-line line1"></div>
   <div class="hamburger-line line2"></div>
   <div class="hamburger-line line3"></div>
+</div>
+<div [ngClass]="{'visible': isChecked}" class="menu">
+  <div>
+    <ul class="list">
+      <li><a class="section" (click)="onHomeClick()">Home </a></li>
+      <li><a class="section" (click)="onAboutClick()">About</a></li>
+      <li><a class="section" (click)="onProjectsClick() ">Projects</a></li>
+      <li><a class="section" (click)="onContactClick() ">Contact</a></li>
+    </ul>
+  </div>
 </div>

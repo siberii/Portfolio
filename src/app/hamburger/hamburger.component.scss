@@ -1,13 +1,17 @@
 @import "../../variables";
 
+$length: 120px;
+
 .hambuger-container {
   position: fixed;
   top: 0;
   background-color: color(accent);
-  height: 120px;
-  width: 120px;
+  height: $length;
+  width: $length;
   transition: background-color ease 0.3s;
   z-index: 10;
+  box-shadow: $shadow;
+
   .hamburger-line {
     position: absolute;
     background-color: color(primary);
@@ -16,6 +20,8 @@
     height: 2px;
     width: 26px;
     left: 60%;
+
+    transition: all 0.4s ease;
   }
 
   .line1 {
@@ -27,11 +33,68 @@
   .line3 {
     top: 70%;
   }
+
+  .toggler {
+    position: absolute;
+    top: 65%;
+    left: 60%;
+    z-index: 10;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+
+    &:checked ~ .hamburger-line {
+      transform: rotate(180deg);
+    }
+  }
 }
 
+// Called when scrolled to about section
 .nav-scrolled {
   background-color: color(primary);
   .hamburger-line {
     background-color: color(accent);
   }
 }
+
+.menu {
+  position: absolute;
+  z-index: 2;
+  background-color: color(secondary);
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8vw;
+  font-weight: bold;
+  color: color(primary);
+  visibility: hidden;
+  transform: translate(-150%, -50%);
+  transition: all 0.4s;
+
+  .list {
+    @include flex-center();
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    height: 100vh;
+    padding: 25vh 35vw;
+
+    li {
+      list-style: none;
+
+      .section {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+

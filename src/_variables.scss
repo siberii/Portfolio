@@ -5,6 +5,9 @@ $colors: (
   "tertiary": lighten(#0f0f11, 30%)
 );
 
+$shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+$no-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }

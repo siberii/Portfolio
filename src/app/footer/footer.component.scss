@@ -48,7 +48,7 @@
   height: 7.5vh;
   z-index: 3;
   cursor: pointer;
-  
+
   @keyframes breathBlack {
     0% {
       transform: translate(-50%, -315%);
@@ -70,22 +70,21 @@
 .triangle-black {
   transform: translate(-50%, -315%);
   animation: breathBlack 0.8s ease infinite alternate;
-
 }
 
 .triangle-white {
   transform: translate(-50%, -275%);
   animation: breathWhite 0.8s ease infinite alternate 0.1s;
-
 }
 
 .contacts {
+  display: block;
   @include flex-center();
   left: 50%;
   transform: translate(-50%, 0%);
   position: fixed;
   bottom: 0;
-
+  
   .contact {
     @include flex-center();
     background-color: color(accent);
@@ -93,6 +92,7 @@
     width: 60px;
     margin-left: 1px;
     transition: transform ease 0.3s;
+    box-shadow: $shadow;
 
     &:hover {
       transform: translateY(-20%);
