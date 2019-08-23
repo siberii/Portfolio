@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +8,16 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class HomeComponent implements OnInit {
   constructor() { }
   @ViewChild('heroRef', { static: true }) heroElemRef: ElementRef;
+  @Input() target: HTMLElement;
+
 
   isActive = false;
   animateOut() {
     this.isActive = true;
   }
-
+  scroll() {
+    this.target.heroElemRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
   ngOnInit() {
   }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-about',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   constructor() { }
+  @ViewChild('heroRef', { static: true }) heroElemRef: ElementRef;
 
   ngOnInit() {
+
   }
 
 }

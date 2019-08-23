@@ -41,14 +41,6 @@
   position: sticky;
   height: auto;
   width: auto;
-  &:hover {
-    .triangle-black {
-      animation: breathBlack 0.8s ease infinite alternate;
-    }
-    .triangle-white {
-      animation: breathWhite 0.8s ease infinite alternate 0.1s;
-    }
-  }
 }
 
 .triangle {
@@ -77,10 +69,14 @@
 
 .triangle-black {
   transform: translate(-50%, -315%);
+  animation: breathBlack 0.8s ease infinite alternate;
+
 }
 
 .triangle-white {
   transform: translate(-50%, -275%);
+  animation: breathWhite 0.8s ease infinite alternate 0.1s;
+
 }
 
 .contacts {
