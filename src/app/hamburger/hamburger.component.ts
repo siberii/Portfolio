@@ -31,25 +31,25 @@ export class HamburgerComponent implements OnInit {
     this.isChecked = e.target.checked;
   }
 
-  onHomeClick(isHeader: HTMLElement) {
+  onHomeClick(isHeader?: HTMLElement) {
     this.home.heroElemRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
     if (!isHeader) {
       this.isChecked = !this.isChecked;
     }
   }
-  onAboutClick(isHeader: HTMLElement) {
+  onAboutClick(isHeader?: HTMLElement) {
     this.about.heroElemRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
     if (!isHeader) {
       this.isChecked = !this.isChecked;
     }
   }
-  onProjectsClick(isHeader: HTMLElement) {
+  onProjectsClick(isHeader?: HTMLElement) {
     this.projects.heroElemRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
     if (!isHeader) {
       this.isChecked = !this.isChecked;
     }
   }
-  onContactClick(isHeader: HTMLElement) {
+  onContactClick(isHeader?: HTMLElement) {
     this.contact.heroElemRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
     if (!isHeader) {
       this.isChecked = !this.isChecked;
