@@ -1,6 +1,7 @@
-<app-hamburger [isScrolled]="isScrolled" #hamburgerRef [home]="homeRef" [about]="aboutRef" [projects]="projectsRef"
-  [contact]="footerRef"></app-hamburger>
-<app-home #homeRef [target]="about"></app-home>
+<app-hamburger #hamburgerRef [isScrolled]="isScrolled" [isScrolledCrums] = "isScrolledCrums" [home]="homeRef" 
+[about]="aboutRef" [projects]="projectsRef" [contact]="footerRef" [isFirstCrum]="isFirstCrum" [isSecondCrum]="isSecondCrum" [isThirdCrum]="isThirdCrum" > 
+</app-hamburger>
+<app-home #homeRef [target]="aboutRef"></app-home>
 <app-about #aboutRef></app-about>
 <app-skills></app-skills>
 <app-projects #projectsRef></app-projects>

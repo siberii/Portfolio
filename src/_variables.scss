@@ -33,3 +33,33 @@ $no-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     opacity: 1;
   }
 }
+
+/* Rotation animation */
+@keyframes rotate90 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+  0% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateBack90 {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// Media query for desktop view
+$desktop: 768px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}

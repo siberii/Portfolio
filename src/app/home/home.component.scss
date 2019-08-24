@@ -1,19 +1,39 @@
 @import "../../variables";
 
+.visible {
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+
 .hero {
   @include flex-center();
   flex-direction: column;
+
   height: 100%;
   color: color(secondary);
   background-color: color(primary);
+
+  @include desktop {
+    padding-bottom: 10%;
+  }
+
   .main-title {
     font-size: 40px;
     font-weight: bold;
+
     // Initial fade in animation
     @include fade-up(0s);
+
+    @include desktop {
+      font-size: 100px;
+    }
   }
-  .main-content{
+
+  .main-content {
     @include fade-up(0.05s);
+    @include desktop {
+      font-size: 25px;
+    }
   }
 
   .cta {
@@ -29,9 +49,16 @@
     margin: 50px auto;
     padding: 10px 20px;
     transition: all ease 0.5s;
+
     // Initial fade in animation
     @include fade-up(0.1s);
 
+    @include desktop {
+      font-size: 25px;
+      width: 290px;
+      padding: 15px 34px;
+      margin-top: 5%;
+    }
 
     &:hover {
       color: color(primary);
@@ -39,7 +66,6 @@
       cursor: pointer;
 
       .triangle {
-        height: 12px;
         filter: invert(1);
         animation: rotate90 0.2s ease forwards 0.1s;
       }
@@ -54,31 +80,16 @@
     }
     .triangle {
       height: 12px;
+
+      @include desktop {
+        height: 16px;
+      }
     }
 
     .triangle-animate {
       animation: rotateBack90 0.2s ease forwards;
     }
-
-    /* Rotation animation */
-    @keyframes rotate90 {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(90deg);
-      }
-      0% {
-        transform: rotate(0deg);
-      }
-    }
-    @keyframes rotateBack90 {
-      0% {
-        transform: rotate(90deg);
-      }
-      100% {
-        transform: rotate(0deg);
-      }
-    }
   }
 }
+
+

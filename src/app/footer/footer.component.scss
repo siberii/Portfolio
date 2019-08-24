@@ -84,6 +84,9 @@
   transform: translate(-50%, 0%);
   position: fixed;
   bottom: 0;
+  @include desktop {
+    transform: translate(150%, 0%)
+  }
   
   .contact {
     @include flex-center();
@@ -93,6 +96,11 @@
     margin-left: 1px;
     transition: transform ease 0.3s;
     box-shadow: $shadow;
+    
+    @include desktop {
+      height: 90px;
+      width: 90px;
+    }
 
     &:hover {
       transform: translateY(-20%);
@@ -100,8 +108,11 @@
     }
 
     .contact-logo {
-      height: 25px;
       display: block;
+      height: 25px;
+      @include desktop {
+        height: 37px;
+      }
     }
   }
 }

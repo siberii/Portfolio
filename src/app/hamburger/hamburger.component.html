@@ -14,3 +14,23 @@
     </ul>
   </div>
 </div>
+
+<div #headerRef class="menu-header">
+  <ul class="list">
+    <li>
+      <a class="section" #header (click)="onHomeClick(header)">Home</a>
+    </li>
+    <li>
+      <a class="section" #header (click)="onAboutClick(header)">About me</a>
+    </li>
+    <li>
+      <a class="section" #header (click)="onProjectsClick(header) ">Projects</a>
+    </li>
+  </ul>
+</div>
+
+<div #crumsRef class="crums" [ngClass]="{'crums-scrolled': isScrolledCrums}">
+  <div class="circle circle-active" (click)="onHomeClick(header)"></div>
+  <div [ngClass]="{'circle-active-black': isSecondCrum}" class="circle" (click)="onAboutClick(header)"></div>
+  <div [ngClass]="{'circle-active-black': isThirdCrum}" class="circle" (click)="onProjectsClick(header)"></div>
+</div>
