@@ -91,7 +91,7 @@ $left-desktop: 70%;
 .menu {
   position: absolute;
   z-index: 2;
-  background-color: color(secondary);
+  background-color: lighten(color(primary), 5%);
   height: 100%;
   width: 100%;
   top: 50%;
@@ -104,20 +104,40 @@ $left-desktop: 70%;
   transform: translate(-150%, -50%);
   transition: all 0.4s;
 
+  @include desktop {
+    font-size: 80px;
+
+    .menu-wrapper {
+      height: 100%;
+      width: 80%;
+      background-color: color(secondary);
+      transition: all ease 0.6s;
+    }
+  }
+
   .list {
     @include flex-center();
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: baseline;
     height: 100vh;
     padding: 25vh 35vw;
 
+    @include desktop {
+      padding: 23vh 42%;
+    }
+
     li {
       list-style: none;
-
+      transition: all ease 0.3s;
+      @include desktop {
+        &:hover {
+          transform: translateX(10%);
+        }
       .section {
         text-decoration: none;
         cursor: pointer;
+        }
       }
     }
   }
@@ -181,7 +201,6 @@ $left-desktop: 70%;
     transform: translate(-50%, -50%);
 
     .circle {
-      box-shadow: $shadow;
       cursor: pointer;
       border: 3px solid color(accent);
       height: $crum-length;

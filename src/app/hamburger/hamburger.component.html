@@ -5,13 +5,15 @@
   <div class="hamburger-line line3"></div>
 </div>
 <div [ngClass]="{'visible': isChecked}" class="menu">
-  <div>
-    <ul class="list">
-      <li><a class="section" (click)="onHomeClick()">Home </a></li>
-      <li><a class="section" (click)="onAboutClick()">About</a></li>
-      <li><a class="section" (click)="onProjectsClick() ">Projects</a></li>
-      <li><a class="section" (click)="onContactClick() ">Contact</a></li>
-    </ul>
+  <div class="menu-wrapper">
+    <div>
+      <ul class="list">
+        <li><a class="section" (click)="onHomeClick()">Home </a></li>
+        <li><a class="section" (click)="onAboutClick()">About</a></li>
+        <li><a class="section" (click)="onProjectsClick() ">Projects</a></li>
+        <li><a class="section" (click)="onContactClick() ">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -21,7 +23,7 @@
       <a class="section" #header (click)="onHomeClick(header)">Home</a>
     </li>
     <li>
-      <a class="section" #header (click)="onAboutClick(header)">About me</a>
+      <a class="section" #header (click)="onAboutClick(header)">About</a>
     </li>
     <li>
       <a class="section" #header (click)="onProjectsClick(header) ">Projects</a>

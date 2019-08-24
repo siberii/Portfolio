@@ -8,6 +8,10 @@ $colors: (
 $shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
 $no-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 
+$title-desktop: 5vh;
+$underline-desktop: 60%;
+$underline-margin-desktop: 14px auto;
+
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }

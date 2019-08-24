@@ -5,17 +5,31 @@
   flex-direction: column;
   color: color(primary);
   background-color: color(secondary);
+  
+  @include desktop {
+    height: 70%;
+    justify-content: flex-start;
+  }
 
   .main-title {
     font-size: 4.1vh;
     font-weight: bold;
     margin: 5vh auto 0;
 
+    @include desktop {
+      font-size: $title-desktop;
+    }
+
     .underline {
       background-color: color(primary);
       height: 4px;
       width: 70px;
       margin: 5px auto;
+
+      @include desktop {
+        margin: $underline-margin-desktop;
+        width: $underline-desktop;
+      }
     }
   }
 
@@ -25,10 +39,20 @@
     width: 100%;
     margin: 6vh 10vw 3vh;
 
+    @include desktop {
+      width: 50%;
+      margin: 6vh 10vw;
+    }
+
     .level {
       padding: 5px 20px;
       &:hover {
         cursor: pointer;
+      }
+
+      @include desktop {
+        font-size: 20px;
+        padding: 10px 30px;
       }
     }
 
@@ -47,13 +71,24 @@
     justify-items: center;
     align-items: center;
 
+    @include desktop {
+      width: 65%;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    }
+
     .skill {
       @include flex-center();
       flex-direction: column;
       height: auto;
+
       .skill-logo {
         height: 8vh;
         width: 20vw;
+
+        @include desktop {
+          height: 9vh;
+          width: 12vw;
+        }
       }
 
       .skill-name {

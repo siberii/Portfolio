@@ -1,5 +1,6 @@
 @import "../../variables";
 
+
 .hero {
   @include flex-center();
   justify-content: space-evenly;
@@ -9,22 +10,54 @@
   color: color(primary);
   background-color: color(secondary);
 
+  @include desktop {
+    justify-content: flex-start;
+    height: auto;
+  }
+
   .main-title {
     font-size: 4.1vh;
     font-weight: bold;
     margin: 5vh auto 0;
+
+    @include desktop {
+      font-size: $title-desktop;
+      margin: 5vh auto;
+    }
 
     .underline {
       background-color: color(primary);
       height: 4px;
       width: 70px;
       margin: 5px auto;
+
+      @include desktop {
+        width: $underline-desktop;
+        margin: 14px auto;
+      }
+    }
+  }
+
+  .wrapper {
+    @include flex-center();
+    flex-direction: column;
+
+    @include desktop {
+      width: 70%;
+      flex-direction: row;
+      justify-content: center;
+      justify-self: center;
     }
   }
 
   .picture {
     height: 15vh;
     margin: 4vh 0;
+
+    @include desktop {
+    height: 18vh;
+
+    }
   }
 
   .main-content {
