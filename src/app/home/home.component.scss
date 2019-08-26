@@ -18,12 +18,11 @@
   }
 
   .main-title {
-    font-size: 40px;
+    font-size: 11vw;
     font-weight: bold;
 
     // Initial fade in animation
     @include fade-up(0s);
-
     @include desktop {
       font-size: 100px;
     }
@@ -31,6 +30,7 @@
 
   .main-content {
     @include fade-up(0.05s);
+    font-size: 4.1vw;
     @include desktop {
       font-size: 25px;
     }

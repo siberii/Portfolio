@@ -8,7 +8,7 @@
   background-color: color(secondary);
 
   @include desktop {
-    padding: 10% auto;
+    padding: 20% auto;
     .projects {
       padding: 2% 0;
       width: 100%;
@@ -61,6 +61,7 @@
       height: 100%;
       margin: 4vh 0 0;
       transition: 0.3s;
+      
       @include desktop {
         width: 400px;
       }
