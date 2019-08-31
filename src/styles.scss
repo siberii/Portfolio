@@ -26,3 +26,35 @@ html {
   overflow-x: hidden;
   // background-color: color(primary);
 }
+
+.loading {
+  position: absolute;
+  z-index: 100;
+  background-color: color(primary-light);
+  height: 100%;
+  width: 100vw;
+  @include flex-center();
+
+  .dots {
+    height: 100%;
+    width: 9rem;
+    @include flex-center();
+    justify-content: space-between;
+    
+    .dot1 {
+      animation-delay: 0s
+    }
+    .dot2 {
+      animation-delay: 0.1s
+    }
+    .dot3 {
+      animation-delay: 0.2s
+    }
+  }
+}
+
+.bounce {
+  animation: bounce 0.9s ease infinite;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
