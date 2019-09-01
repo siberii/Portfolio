@@ -5,7 +5,20 @@
   transform: translate(-50%, -50%);
 }
 
+#particles-js{
+  position: absolute;
+  z-index: 1;
+  height: 110%;
+  width: 110%;
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%;
+}
+
+
+
 .hero {
+  position: relative;
   @include flex-center();
   flex-direction: column;
 
@@ -39,7 +52,7 @@
   .cta {
     @include flex-center();
     justify-content: space-between;
-
+    z-index: 2;
     width: 190px;
     font-size: 17px;
     font-weight: bold;

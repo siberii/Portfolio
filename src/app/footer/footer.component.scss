@@ -78,6 +78,8 @@
 }
 
 .contacts {
+  z-index: 2;
+
   display: block;
   @include flex-center();
   left: 50%;
@@ -89,6 +91,7 @@
   }
   
   .contact {
+    
     @include flex-center();
     background-color: color(accent);
     height: 60px;
