@@ -48,6 +48,7 @@
     @include flex-center();
     flex-direction: column;
     cursor: pointer;
+    margin: 4vh 0;
 
     &:hover {
       .project-details {
@@ -60,11 +61,10 @@
     }
 
     .project-picture {
-      height: 100%;
       transition: 0.3s;
       box-shadow: $shadow;
-      width: 400px;
-      height: 260px;
+      width: 305px;
+      height: 200px;
     }
 
     .project-title {
