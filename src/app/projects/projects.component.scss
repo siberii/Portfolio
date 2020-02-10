@@ -9,9 +9,10 @@
 
   @include desktop {
     padding: 20% auto;
+
     .projects {
-      padding: 2% 0;
-      width: 100%;
+      padding: 0 0 2%;
+      width: 55%;
       @include flex-center();
       justify-content: space-evenly;
     }
@@ -52,19 +53,18 @@
       .project-details {
         opacity: 1;
       }
+
       .project-picture {
-        opacity: 0.5;
+        opacity: 0.1;
       }
     }
 
     .project-picture {
       height: 100%;
-      margin: 4vh 0 0;
       transition: 0.3s;
-      
-      @include desktop {
-        width: 400px;
-      }
+      box-shadow: $shadow;
+      width: 400px;
+      height: 260px;
     }
 
     .project-title {
